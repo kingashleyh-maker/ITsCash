@@ -1,0 +1,153 @@
+#payApp {
+  position: fixed;
+  inset: 0;
+  z-index: 160;
+  overflow: auto;
+  background: #f1f5f8;
+  color: #193348;
+  font:
+    14px/1.5 "Segoe UI",
+    sans-serif;
+}
+#payApp[hidden] {
+  display: none;
+}
+#payApp * {
+  box-sizing: border-box;
+}
+#payApp button,
+#payApp input,
+#payApp select,
+#payApp textarea {
+  font: inherit;
+}
+#payApp .pw-top {
+  background: linear-gradient(110deg, #102b43, #114c56);
+}
+#payApp .pw-btn {
+  cursor: pointer;
+}
+#payApp .pw-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+#payApp input:read-only {
+  background: #eef3f6;
+}
+.pay-amount {
+  font-size: 30px;
+  font-weight: 850;
+  letter-spacing: -1px;
+}
+.pay-kicker {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #567c8e;
+}
+.pay-status {
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 20px;
+  background: #e6eef5;
+  color: #3e617b;
+  display: inline-block;
+  font-weight: 750;
+}
+.pay-status.Successful,
+.pay-status.Paid,
+.pay-status.Claimed {
+  background: #e1f4eb;
+  color: #187253;
+}
+.pay-status.Failed,
+.pay-status.Cancelled,
+.pay-status.Refunded {
+  background: #fce8e8;
+  color: #a73942;
+}
+.pay-status.Pending {
+  background: #fff1cf;
+  color: #8c681c;
+}
+.pay-unread {
+  border-left: 4px solid #087b75;
+}
+.pay-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 9px 0;
+  border-bottom: 1px solid #edf1f5;
+}
+.pay-notice {
+  background: #e7f5f3;
+  border: 1px solid #b8ddd7;
+  border-radius: 9px;
+  padding: 12px 15px;
+  margin: 12px 0;
+}
+.pay-receipt {
+  font-size: 12px;
+  max-width: 720px;
+  margin: auto;
+}
+.pay-receipt dl {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 10px;
+}
+.pay-receipt dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.pay-receipt h2 {
+  font-size: 24px;
+}
+.pay-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pay-check {
+  padding: 10px;
+  background: #f4f7f9;
+  border-radius: 8px;
+}
+.pay-check input {
+  width: auto;
+  margin-right: 8px;
+}
+.pay-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+@media (max-width: 700px) {
+  #payApp .pw-grid,
+  #payApp .pw-form {
+    grid-template-columns: 1fr;
+  }
+  #payApp .pw-top {
+    padding: 15px;
+  }
+  #payApp .pw-wrap {
+    padding: 14px;
+  }
+  .pay-receipt dl {
+    grid-template-columns: 115px 1fr;
+  }
+  .pay-amount {
+    font-size: 25px;
+  }
+}
+.uniform-shop-actions .pw-entry {
+  background: #0d5f5d;
+  border-color: #318b82;
+  color: #e9fffb;
+}
+.uniform-shop-actions .pw-entry:hover {
+  background: #13766d;
+  color: #fff;
+}
